@@ -1,4 +1,4 @@
-package com.hybridTest.web.example;
+package com.hybridTest.webTest.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
