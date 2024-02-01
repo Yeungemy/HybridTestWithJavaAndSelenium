@@ -14,5 +14,4 @@
 
 # Steps to run the project:
     1. clone the repository: git@github.com:Yeungemy/HybridTestWithJavaAndSelenium.git
-    2. run web UI test: mvn clean test -D surefire.suiteXmlFiles=src/test/java/com/hybridTest/suite/webTest.xml
-    3. run allure server: allure serve allure-results 
+    2. run web UI test and then open allure report accordingly: ./scripts/webTestRunner.sh
