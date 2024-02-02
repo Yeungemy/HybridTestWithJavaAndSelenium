@@ -6,7 +6,7 @@ mvn clean test -D surefire.suiteXmlFiles=src/test/java/com/hybridTest/suite/webT
 # Check if the tests passed before trying to serve the Allure report
 if [ $? -eq 0 ]; then
   # Start the Allure server
-  allure serve allure-results
+  allure serve target/allure-results
 else
   echo "Tests failed. Allure report will not be generated."
 fi

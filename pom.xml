@@ -80,6 +80,10 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <!-- Add this configuration to redirect allure-results to target directory -->
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
                 </configuration>
                 <dependencies>
                     <dependency>
