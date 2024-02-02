@@ -1,4 +1,4 @@
-package com.hybridTest.pages;
+package com.hybridTest.pageObjectsTest;
 
 public class ListNode {
     int val;

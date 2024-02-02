@@ -1,4 +1,4 @@
-package com.hybridTest.unitTest.math;
+package com.hybrid.unitTest.math;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
