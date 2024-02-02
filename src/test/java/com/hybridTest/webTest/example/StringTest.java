@@ -2,8 +2,6 @@ package com.hybridTest.webTest.example;
 
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
-
 public class StringTest {
     @Test
 
