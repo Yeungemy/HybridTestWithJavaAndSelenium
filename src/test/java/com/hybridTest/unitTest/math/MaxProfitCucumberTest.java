@@ -3,7 +3,7 @@ package com.hybridTest.unitTest.math;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MaxProfitTest {
+public class MaxProfitCucumberTest {
 
     @Test
     public void testMaxProfit() {

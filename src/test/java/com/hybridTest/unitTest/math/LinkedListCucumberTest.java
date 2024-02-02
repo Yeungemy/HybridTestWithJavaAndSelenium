@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static com.hybridTest.pages.ListNode.*;
 
-public class LinkedListTest {
+public class LinkedListCucumberTest {
     @Test
     public void deleteNodeTest() {
         // Example 1: [4, 5, 1, 9], node = 5

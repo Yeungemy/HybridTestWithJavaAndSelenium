@@ -2,7 +2,7 @@ package com.hybridTest.unitTest.math;
 
 import org.testng.annotations.Test;
 
-public class StringTest {
+public class StringCucumberTest {
     @Test
 
     public void reverseStringTest(){
