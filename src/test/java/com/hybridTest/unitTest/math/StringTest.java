@@ -1,4 +1,4 @@
-package com.hybridTest.webTest.example;
+package com.hybridTest.unitTest.math;
 
 import org.testng.annotations.Test;
 
