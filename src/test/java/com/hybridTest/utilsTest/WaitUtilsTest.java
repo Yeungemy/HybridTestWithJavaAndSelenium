@@ -11,19 +11,19 @@ import java.time.Duration;
 public class WaitUtilsTest extends BasePageTest {
     public WaitUtilsTest(WebDriver driver) {
         super(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        BasePageTest.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public static void waitForContentInInputField(WebElement webEl, String expectedContent) {
-        wait.until(ExpectedConditions.textToBePresentInElementValue(webEl, expectedContent));
+        BasePageTest.wait.until(ExpectedConditions.textToBePresentInElementValue(webEl, expectedContent));
     }
 
     public static void waitForClickable(WebElement webEl){
-        wait.until(ExpectedConditions.elementToBeClickable(webEl));
+        BasePageTest.wait.until(ExpectedConditions.elementToBeClickable(webEl));
     }
 
     public static void waitAndClick(WebElement webEl){
-        wait.until(ExpectedConditions.elementToBeClickable(webEl));
+        BasePageTest.wait.until(ExpectedConditions.elementToBeClickable(webEl));
         webEl.click();
     }
 }

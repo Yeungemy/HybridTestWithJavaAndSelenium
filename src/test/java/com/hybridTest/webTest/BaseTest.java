@@ -3,15 +3,13 @@ package com.hybridTest.webTest;
 import com.hybridTest.pageObjectsTest.BasePageTest;
 import com.hybridTest.utilsTest.DriverFactoryTest;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 public class BaseTest {
-    protected WebDriver driver;
-    protected BasePageTest basePage;
+    protected static WebDriver driver;
+    protected static BasePageTest basePage;
 
-    @BeforeClass
+    @BeforeSuite
     public void setUpDriver() {
         // Set up WebDriver using the default browser (Chrome)
         driver = DriverFactoryTest.createDriver();
@@ -20,12 +18,12 @@ public class BaseTest {
         basePage = new BasePageTest(driver);
     }
 
-    @BeforeMethod
+    @BeforeClass
     public void launchTestPlatform() {
         basePage.launchWebTestPlatform();
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown() {
         // Close the browser
         if (driver != null) {
