@@ -1,6 +1,6 @@
-package com.hybridTest.webTest;
+package com.hybridTest.webUITest.e2eTest;
 
-import pageObjectsTest.BasePageTest;
+import com.hybridTest.webUITest.pageObjectsTest.BasePageTest;
 import utilsTest.DriverFactoryTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;

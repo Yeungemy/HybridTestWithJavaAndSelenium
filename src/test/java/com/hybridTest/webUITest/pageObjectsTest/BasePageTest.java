@@ -1,4 +1,4 @@
-package pageObjectsTest;
+package com.hybridTest.webUITest.pageObjectsTest;
 
 import utilsTest.ConfigReaderTest;
 import utilsTest.WaitUtilsTest;

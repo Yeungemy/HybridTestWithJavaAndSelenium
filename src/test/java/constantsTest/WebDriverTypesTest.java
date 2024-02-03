@@ -1,4 +1,4 @@
-package constants;
+package constantsTest;
 
 public enum WebDriverTypesTest {
     CHROME,
