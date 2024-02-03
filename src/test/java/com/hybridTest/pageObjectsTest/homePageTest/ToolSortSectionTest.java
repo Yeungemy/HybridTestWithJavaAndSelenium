@@ -23,6 +23,6 @@ public class ToolSortSectionTest extends BasePageTest {
     public void sortToolsByNameDescOrder(){
         WaitUtilsTest.waitAndClick(sortDropdownField);
         WaitUtilsTest.waitAndClick(nameDescSortOption);
-        WaitUtilsTest.waitForContentInInputField(sortDropdownField, NAME_DESC_SORT_OPTION);
+        WaitUtilsTest.waitForTextPresentedInInputField(sortDropdownField, NAME_DESC_SORT_OPTION);
     }
 }
