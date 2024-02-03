@@ -1,8 +1,8 @@
-package com.hybridTest.webUITest.e2eTest.homePageTest;
+package com.hybridTest.webTest.homePageTest;
 
-import com.hybridTest.webUITest.pageObjectsTest.homePageTest.ToolSearchSectionTest;
-import utilsTest.ActionUtilsTest;
-import com.hybridTest.webUITest.e2eTest.BaseTest;
+import com.hybridTest.pageObjectOfModels.webUiTestPages.homePageTest.ToolSearchSectionTest;
+import com.hybridTest.utils.ActionUtilsE2eTest;
+import com.hybridTest.webTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +13,7 @@ public class ToolSearchFieldTest extends BaseTest {
         ToolSearchSectionTest toolSearchSection = new ToolSearchSectionTest(driver);
 
         String searchString = "***Combination Pliers1";
-        ActionUtilsTest.fillInputField(toolSearchSection.searchInputField, searchString);
+        ActionUtilsE2eTest.fillInputField(toolSearchSection.searchInputField, searchString);
 
         String inputFieldValue = toolSearchSection.searchInputField.getAttribute("value");
 

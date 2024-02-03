@@ -1,12 +1,11 @@
-package utilsTest;
-
-import com.hybridTest.webUITest.pageObjectsTest.BasePageTest;
+package com.hybridTest.utils;
+import com.hybridTest.pageObjectOfModels.webUiTestPages.BasePageTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class WaitUtilsTest extends BasePageTest {
-    public WaitUtilsTest(WebDriver driver) {
+public class WaitUtilsE2eTest extends BasePageTest {
+    public WaitUtilsE2eTest(WebDriver driver) {
         super(driver);
     }
 
@@ -24,6 +23,6 @@ public class WaitUtilsTest extends BasePageTest {
     }
 
     public static void waitElementToBeVisible(WebElement webEl){
-        wait.until(ExpectedConditions.visibilityOf(webEl));
+        BasePageTest.wait.until(ExpectedConditions.visibilityOf(webEl));
     }
 }

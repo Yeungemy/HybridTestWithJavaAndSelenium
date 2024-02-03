@@ -1,7 +1,7 @@
-package com.hybridTest.webUITest.pageObjectsTest;
+package com.hybridTest.pageObjectOfModels.webUiTestPages;
 
-import utilsTest.ConfigReaderTest;
-import utilsTest.WaitUtilsTest;
+import com.hybridTest.config.ConfigReaderTest;
+import com.hybridTest.utils.WaitUtilsE2eTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,7 +38,7 @@ public class BasePageTest {
     public void navigateTo(String url) {
         driver.get(url);
         // Dynamically wait for the body to be present
-        WaitUtilsTest.waitElementToBeVisible(pageBodyTag);
+        WaitUtilsE2eTest.waitElementToBeVisible(pageBodyTag);
     }
 
     // Common method to get the page title

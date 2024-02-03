@@ -1,4 +1,4 @@
-package com.hybrid.smallProjects;
+package com.hybridTest.smallProjects;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

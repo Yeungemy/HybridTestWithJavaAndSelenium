@@ -1,7 +1,7 @@
-package com.hybridTest.webUITest.e2eTest.homePageTest;
+package com.hybridTest.webTest.homePageTest;
 
-import com.hybridTest.webUITest.pageObjectsTest.homePageTest.ToolSortSectionTest;
-import com.hybridTest.webUITest.e2eTest.BaseTest;
+import com.hybridTest.pageObjectOfModels.webUiTestPages.homePageTest.ToolSortSectionTest;
+import com.hybridTest.webTest.BaseTest;
 import org.testng.annotations.Test;
 
 public class ToolSortTest extends BaseTest {

@@ -1,4 +1,4 @@
-package pages;
+package com.hybridTest.pageObjectOfModels.unitTestPages;
 
 public class ListNode {
     int val;

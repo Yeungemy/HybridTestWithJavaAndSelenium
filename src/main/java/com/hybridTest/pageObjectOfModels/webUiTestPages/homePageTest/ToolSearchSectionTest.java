@@ -1,6 +1,6 @@
-package com.hybridTest.webUITest.pageObjectsTest.homePageTest;
+package com.hybridTest.pageObjectOfModels.webUiTestPages.homePageTest;
 
-import com.hybridTest.webUITest.pageObjectsTest.BasePageTest;
+import com.hybridTest.pageObjectOfModels.webUiTestPages.BasePageTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

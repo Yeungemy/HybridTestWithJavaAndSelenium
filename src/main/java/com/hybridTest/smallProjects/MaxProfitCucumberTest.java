@@ -1,4 +1,4 @@
-package com.hybrid.smallProjects;
+package com.hybridTest.smallProjects;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,6 +1,6 @@
-package com.hybrid.smallProjects;
+package com.hybridTest.smallProjects;
 
-import pages.ListNode;
+import com.hybridTest.pageObjectOfModels.unitTestPages.ListNode;
 import org.testng.annotations.Test;
 
 public class LinkedListCucumberTest {

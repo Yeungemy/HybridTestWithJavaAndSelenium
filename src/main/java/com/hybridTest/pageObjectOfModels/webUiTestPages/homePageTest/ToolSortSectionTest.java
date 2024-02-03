@@ -1,7 +1,7 @@
-package com.hybridTest.webUITest.pageObjectsTest.homePageTest;
+package com.hybridTest.pageObjectOfModels.webUiTestPages.homePageTest;
 
-import com.hybridTest.webUITest.pageObjectsTest.BasePageTest;
-import utilsTest.WaitUtilsTest;
+import com.hybridTest.pageObjectOfModels.webUiTestPages.BasePageTest;
+import com.hybridTest.utils.WaitUtilsE2eTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,8 +21,8 @@ public class ToolSortSectionTest extends BasePageTest {
     public WebElement nameDescSortOption;
 
     public void sortToolsByNameDescOrder(){
-        WaitUtilsTest.waitAndClick(sortDropdownField);
-        WaitUtilsTest.waitAndClick(nameDescSortOption);
-        WaitUtilsTest.waitForTextPresentedInInputField(sortDropdownField, NAME_DESC_SORT_OPTION);
+        WaitUtilsE2eTest.waitAndClick(sortDropdownField);
+        WaitUtilsE2eTest.waitAndClick(nameDescSortOption);
+        WaitUtilsE2eTest.waitForTextPresentedInInputField(sortDropdownField, NAME_DESC_SORT_OPTION);
     }
 }

@@ -1,9 +1,11 @@
-package com.hybridTest.webUITest.e2eTest;
+package com.hybridTest.webTest;
 
-import com.hybridTest.webUITest.pageObjectsTest.BasePageTest;
-import utilsTest.DriverFactoryTest;
+import com.hybridTest.pageObjectOfModels.webUiTestPages.BasePageTest;
+import com.hybridTest.driver.DriverFactoryTest;
+import listeners.BaseTestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+@Listeners(BaseTestListener.class)
 
 public class BaseTest {
     protected static WebDriver driver;
@@ -12,7 +14,7 @@ public class BaseTest {
     @BeforeSuite
     public void setUpDriver() {
         // Set up WebDriver using the default browser (Chrome)
-        driver = DriverFactoryTest.createDriver();
+        driver = DriverFactoryTest.getDriver();
 
         // Initialize BasePage
         basePage = new BasePageTest(driver);
@@ -25,9 +27,6 @@ public class BaseTest {
 
     @AfterSuite
     public void tearDown() {
-        // Close the browser
-        if (driver != null) {
-            driver.quit();
-        }
+        DriverFactoryTest.quitDriver();
     }
 }
