@@ -1,4 +1,4 @@
-package com.hybrid.unitTest.math;
+package com.hybrid.smallProjects;
 
 import org.testng.annotations.Test;
 

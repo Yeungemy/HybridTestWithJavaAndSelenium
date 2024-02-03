@@ -1,4 +1,4 @@
-package com.hybrid.unitTest.math;
+package com.hybrid.smallProjects;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

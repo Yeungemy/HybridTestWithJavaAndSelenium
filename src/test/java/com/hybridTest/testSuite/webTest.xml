@@ -5,8 +5,8 @@
     </listeners>
     <test name="WebTest">
         <classes>
-            <class name="com.hybridTest.webTest.example.ToolSearchFieldTest"/>
-            <class name="com.hybridTest.webTest.example.ToolSortTest"/>
+            <class name="com.hybridTest.webTest.homePageTest.ToolSearchFieldTest"/>
+            <class name="com.hybridTest.webTest.homePageTest.ToolSortTest"/>
         </classes>
     </test>
 </suite>

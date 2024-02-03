@@ -1,4 +1,20 @@
 # Project name: HybridTestWithJavaAndSelenium
+HybridTestWithJavaAndSelenium
+|-- .dockerignore
+|-- .gitignore
+|-- .github
+|-- Dockerfile
+|-- jenkinsfiles
+|-- k8s
+|-- pom.xml
+|-- README.md
+|-- runTest.sh
+|-- src
+|   |-- main
+|   |-- test
+|-- target
+|   |-- allure-results
+|   |-- allure-reports
 
 # Languages and Framework
     1. Java-21
