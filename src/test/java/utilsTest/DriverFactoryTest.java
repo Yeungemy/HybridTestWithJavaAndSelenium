@@ -1,6 +1,6 @@
-package com.hybridTest.utilsTest;
+package utilsTest;
 
-import com.hybridTest.constants.WebDriverTypesTest;
+import constants.WebDriverTypesTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,7 +1,7 @@
 package com.hybridTest.webTest.homePageTest;
 
-import com.hybridTest.pageObjectsTest.homePageTest.ToolSearchSectionTest;
-import com.hybridTest.utilsTest.ActionUtilsTest;
+import pageObjectsTest.homePageTest.ToolSearchSectionTest;
+import utilsTest.ActionUtilsTest;
 import com.hybridTest.webTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;

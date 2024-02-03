@@ -1,6 +1,6 @@
 package com.hybridTest.webTest.homePageTest;
 
-import com.hybridTest.pageObjectsTest.homePageTest.ToolSortSectionTest;
+import pageObjectsTest.homePageTest.ToolSortSectionTest;
 import com.hybridTest.webTest.BaseTest;
 import org.testng.annotations.Test;
 

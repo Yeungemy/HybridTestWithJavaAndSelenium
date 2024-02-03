@@ -1,4 +1,4 @@
-package com.hybridTest.utilsTest;
+package utilsTest;
 
 import java.io.IOException;
 import java.io.InputStream;

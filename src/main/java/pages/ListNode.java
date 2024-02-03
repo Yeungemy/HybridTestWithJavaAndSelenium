@@ -1,4 +1,4 @@
-package com.hybrid.pages;
+package pages;
 
 public class ListNode {
     int val;

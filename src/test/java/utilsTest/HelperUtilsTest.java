@@ -1,4 +1,4 @@
-package com.hybridTest.utilsTest;
+package utilsTest;
 
 public class HelperUtilsTest {
 }

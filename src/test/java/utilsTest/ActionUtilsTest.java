@@ -1,4 +1,4 @@
-package com.hybridTest.utilsTest;
+package utilsTest;
 
 import org.openqa.selenium.WebElement;
 

@@ -1,6 +1,6 @@
-package com.hybridTest.utilsTest;
+package utilsTest;
 
-import com.hybridTest.pageObjectsTest.BasePageTest;
+import pageObjectsTest.BasePageTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

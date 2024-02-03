@@ -1,7 +1,7 @@
-package com.hybridTest.pageObjectsTest;
+package pageObjectsTest;
 
-import com.hybridTest.utilsTest.ConfigReaderTest;
-import com.hybridTest.utilsTest.WaitUtilsTest;
+import utilsTest.ConfigReaderTest;
+import utilsTest.WaitUtilsTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

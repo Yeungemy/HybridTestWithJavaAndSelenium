@@ -1,4 +1,4 @@
-package com.hybridTest.constants;
+package constants;
 
 public enum WebDriverTypesTest {
     CHROME,
