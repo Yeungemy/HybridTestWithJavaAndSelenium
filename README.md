@@ -1,4 +1,5 @@
 # Project name: HybridTestWithJavaAndSelenium
+
 HybridTestWithJavaAndSelenium
 |-- .dockerignore
 |-- .gitignore
@@ -10,13 +11,14 @@ HybridTestWithJavaAndSelenium
 |-- README.md
 |-- runTest.sh
 |-- src
-|   |-- main
-|   |-- test
+| |-- main
+| |-- test
 |-- target
-|   |-- allure-results
-|   |-- allure-reports
+| |-- allure-results
+| |-- allure-reports
 
 # Languages and Framework
+
     1. Java-21
     2. Maven
     3. Selenium-java
@@ -29,6 +31,7 @@ HybridTestWithJavaAndSelenium
     10. 
 
 # Steps to run the project:
+
     1. clone the repository: git@github.com:Yeungemy/HybridTestWithJavaAndSelenium.git
     2. Install dependencies: 
         - mvn clean install -D skipTests

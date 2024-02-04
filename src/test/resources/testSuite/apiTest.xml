@@ -2,11 +2,11 @@
 <suite name="ApiTestSuite">
 
     <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
     <test name="ApiTests">
-    <classes>
-        <class name="com.hybridTest.apiTest.stepDefinitions.FindPetsByStatus"/>
-    </classes>
-</test>
+        <classes>
+            <class name="com.hybridTest.apiTest.stepDefinitions.FindPetsByStatus"/>
+        </classes>
+    </test>
 </suite>

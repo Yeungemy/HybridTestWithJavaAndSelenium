@@ -11,9 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class BasePageTest {
-    protected WebDriver driver;
     protected static WebDriverWait wait;
     protected final String WEB_TEST_PLATFORM_NAME = "web_test_url";
+    @FindBy(tagName = "body")
+    public WebElement pageBodyTag;
+    protected WebDriver driver;
 
     // Constructor to initialize WebDriver and WebDriverWait
     public BasePageTest(WebDriver driver) {
@@ -22,9 +24,6 @@ public class BasePageTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
-
-    @FindBy(tagName = "body")
-    public WebElement pageBodyTag;
 
     private void maximizeWindow() {
         driver.manage().window().maximize();

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class StringCucumberTest {
     @Test
 
-    public void reverseStringTest(){
+    public void reverseStringTest() {
         char[] s = {'h', '1', '2', '3'};
         System.out.print("The original string: ");
         System.out.println(s);
@@ -16,7 +16,7 @@ public class StringCucumberTest {
 
     public void reverseString(char[] s) {
         char temp;
-        for(int i = 0, j = s.length - 1; i < s.length/2 ; i++, j--){
+        for (int i = 0, j = s.length - 1; i < s.length / 2; i++, j--) {
             temp = s[i];
             s[i] = s[j];
             s[j] = temp;

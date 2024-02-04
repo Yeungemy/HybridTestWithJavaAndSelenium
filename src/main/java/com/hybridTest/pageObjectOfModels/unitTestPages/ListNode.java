@@ -1,8 +1,8 @@
 package com.hybridTest.pageObjectOfModels.unitTestPages;
 
 public class ListNode {
-    int val;
     public ListNode next;
+    int val;
 
     public ListNode(int val) {
         this.val = val;

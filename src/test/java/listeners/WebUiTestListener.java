@@ -1,4 +1,4 @@
 package listeners;
 
-public class WebUiTestListener extends BaseTestListener{
+public class WebUiTestListener extends BaseTestListener {
 }

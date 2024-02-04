@@ -12,7 +12,9 @@ import java.time.Duration;
 
 public class DriverFactoryTest {
     private static WebDriver driver;
-    private DriverFactoryTest() {}
+
+    private DriverFactoryTest() {
+    }
 
     public static WebDriver getDriver() {
         if (driver == null) {
@@ -21,7 +23,8 @@ public class DriverFactoryTest {
         return driver;
     }
 
-    /** retrieves (mvn test -D browser=firefox) the value of the system property named "browser."
+    /**
+     * retrieves (mvn test -D browser=firefox) the value of the system property named "browser."
      * The getProperty method is used to get the value of a system property,
      * and in this case, it checks if the "browser" property is set.
      * the default value is set to "chrome."

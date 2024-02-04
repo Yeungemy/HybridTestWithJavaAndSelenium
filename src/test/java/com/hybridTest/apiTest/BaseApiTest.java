@@ -11,8 +11,8 @@ import org.testng.annotations.Listeners;
 
 @Listeners(ApiTestListener.class)
 public class BaseApiTest {
-    protected RequestSpecification requestSpec;
     protected final String BASE_URI = "api_test_uri";
+    protected RequestSpecification requestSpec;
 
     @BeforeClass
     public void setUp() {
