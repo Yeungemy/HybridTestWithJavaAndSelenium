@@ -2,11 +2,11 @@ package com.hybridTest.webTest.homePageTest;
 
 import com.hybridTest.pageObjectOfModels.webUiTestPages.homePageTest.ToolSearchSectionTest;
 import com.hybridTest.utils.ActionUtilsE2eTest;
-import com.hybridTest.webTest.BaseTest;
+import com.hybridTest.webTest.BaseWebUiTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ToolSearchFieldTest extends BaseTest {
+public class ToolSearchFieldTest extends BaseWebUiTest {
 
     @Test
     public void verifyToolSearchField() {

@@ -2,12 +2,12 @@ package com.hybridTest.webTest;
 
 import com.hybridTest.pageObjectOfModels.webUiTestPages.BasePageTest;
 import com.hybridTest.driver.DriverFactoryTest;
-import listeners.BaseTestListener;
+import listeners.WebUiTestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-@Listeners(BaseTestListener.class)
+@Listeners(WebUiTestListener.class)
 
-public class BaseTest {
+public class BaseWebUiTest {
     protected static WebDriver driver;
     protected static BasePageTest basePage;
 
