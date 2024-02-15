@@ -17,7 +17,7 @@ import java.time.Duration;
 public class DriverFactoryTest {
     private static WebDriver driver;
     private static final Boolean isHeadless = ConfigReaderTest.isHeadless();
-    private static final String browser = ConfigReaderTest.getWebBrowser("web_browser");
+    private static final String browser = ConfigReaderTest.getWebBrowser("browser");
 
     private DriverFactoryTest() {
     }

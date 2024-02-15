@@ -21,6 +21,8 @@
 
     3. run web UI test and then open allure report accordingly:
         c. run web test: mvn clean test -D suiteXmlFile=src/test/resources/testSuite/webTest.xml
+            c.1 run headlessly: update "headless=true" in the file: src/test/resources/config.properties
+            c.1 run locally: update "headless=false" in the file: src/test/resources/config.properties
         b. run api test: mvn clean test -D suiteXmlFile=src/test/resources/testSuite/apiTest.xml
         c. run all tests: ./scripts/runTest.sh
         d. open the allure report: allure serve target/allure-results
