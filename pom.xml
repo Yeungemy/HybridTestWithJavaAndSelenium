@@ -74,6 +74,13 @@
             <version>7.15.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>27.0.0</version>
+        </dependency>
+
+
         <!-- Allure -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
