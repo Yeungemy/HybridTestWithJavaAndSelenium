@@ -18,7 +18,7 @@ public class BaseWebUiTest {
     @BeforeSuite
     public void setUpDriver() {
         // Set up WebDriver using the default browser (Chrome)
-        driver = DriverFactoryTest.getDriver();
+        driver = DriverFactoryTest.initializeDriver();
 
         // Initialize BasePage
         basePage = new BasePageTest(driver);

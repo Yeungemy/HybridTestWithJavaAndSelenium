@@ -2,7 +2,7 @@
 
 run_web_tests() {
     echo "Running Web Tests..."
-    mvn clean test -D suiteXmlFile=src/test/resources/testSuite/webTest.xml
+    mvn clean test -D suiteXmlFile=src/test/resources/testSuite/webTest.xml -D headless=true
 }
 
 run_api_tests() {
@@ -10,28 +10,15 @@ run_api_tests() {
     mvn clean test -D suiteXmlFile=src/test/resources/testSuite/apiTest.xml
 }
 
-run_all_tests() {
-    echo "Running All Tests..."
-    mvn clean test
-}
-
 generate_allure_report() {
     echo "Generating Allure Report..."
-    allure generate --clean -o target/allure-report
+    allure generate --clean -o ../target/allure-report
 }
 
-# Check command-line argument
-if [ "$1" == "web" ]; then
-    run_web_tests
-elif [ "$1" == "api" ]; then
-    run_api_tests
-else
-    run_all_tests
-fi
+# Run both API and web tests
+run_api_tests
+run_web_tests
 
 # Generate Allure report
 generate_allure_report
 
-
-# Check if the tests passed before trying to serve the Allure report
-allure serve target/allure-results

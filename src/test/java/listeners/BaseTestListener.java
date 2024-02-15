@@ -51,7 +51,7 @@ public class BaseTestListener implements ITestListener {
     }
 
     private void logScreenshot(ITestResult result) {
-        WebDriver driver = DriverFactoryTest.getDriver();
+        WebDriver driver = DriverFactoryTest.initializeDriver();
         byte[] screenshotBytes = ScreenshotUtils.captureScreenshotAsBytes(driver);
         Allure.addAttachment("Screenshot", new ByteArrayInputStream(screenshotBytes));
     }

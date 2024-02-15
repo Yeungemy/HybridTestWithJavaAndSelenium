@@ -1,6 +1,7 @@
 target/
 allure-results/
 .fastRequest/
+.allure/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

@@ -34,4 +34,12 @@ public class ConfigReaderTest {
     public static String getPassword(String name) {
         return properties.getProperty(name);
     }
+
+    public static Boolean isHeadless() {
+        return Boolean.parseBoolean(properties.getProperty("headless"));
+    }
+
+    public static String getWebBrowser(String webBrowser) {
+        return properties.getProperty(webBrowser);
+    }
 }

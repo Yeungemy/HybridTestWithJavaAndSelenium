@@ -153,7 +153,8 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure-maven.version}</version>
                 <configuration>
-                    <resultsDirectory>${project.build.directory}/cucumber-results</resultsDirectory>
+                    <!-- Set the directory where the Allure results are generated -->
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
                 </configuration>
                 <executions>
                     <execution>

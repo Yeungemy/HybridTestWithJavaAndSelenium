@@ -1,52 +1,57 @@
 package com.hybridTest.driver;
 
-
+import com.hybridTest.config.ConfigReaderTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 
 import java.time.Duration;
 
 public class DriverFactoryTest {
     private static WebDriver driver;
+    private static final Boolean isHeadless = ConfigReaderTest.isHeadless();
+    private static final String browser = ConfigReaderTest.getWebBrowser("web_browser");
 
     private DriverFactoryTest() {
     }
 
-    public static WebDriver getDriver() {
-        if (driver == null) {
-            initializeDriver();
-        }
-        return driver;
-    }
-
-    /**
-     * retrieves (mvn test -D browser=firefox) the value of the system property named "browser."
-     * The getProperty method is used to get the value of a system property,
-     * and in this case, it checks if the "browser" property is set.
-     * the default value is set to "chrome."
-     */
-    private static void initializeDriver() {
-        String browser = System.getProperty("browser", "chrome");
-
+    public static WebDriver initializeDriver() {
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                if (isHeadless) {
+                    chromeOptions.addArguments("--headless");
+                }
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                if (isHeadless) {
+                    firefoxOptions.addArguments("--headless");
+                }
+                driver = new FirefoxDriver(firefoxOptions);
                 break;
             case "ie":
                 WebDriverManager.iedriver().setup();
-                driver = new InternetExplorerDriver();
+                InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+                // Add additional options if needed
+                driver = new InternetExplorerDriver(ieOptions);
                 break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
+                EdgeOptions options=new EdgeOptions();
+                if (isHeadless) {
+                    options.addArguments("--headless");
+                }
                 driver = new EdgeDriver();
                 break;
             default:
@@ -61,6 +66,8 @@ public class DriverFactoryTest {
 
         // Set page load timeout
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+
+        return driver;
     }
 
     public static void quitDriver() {
