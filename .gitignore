@@ -5,7 +5,7 @@ allure-results/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-AutomationWithJavaAndSelenium.iml
+HybridTestWithJavaAndSelenium.iml
 
 ### IntelliJ IDEA ###
 .idea/

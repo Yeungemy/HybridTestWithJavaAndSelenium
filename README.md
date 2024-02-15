@@ -1,24 +1,5 @@
 # Project name: HybridTestWithJavaAndSelenium
-
-HybridTestWithJavaAndSelenium
-|-- .dockerignore
-|-- .gitignore
-|-- .github
-|-- Dockerfile
-|-- jenkinsfiles
-|-- k8s
-|-- pom.xml
-|-- README.md
-|-- runTest.sh
-|-- src
-| |-- main
-| |-- test
-|-- target
-| |-- allure-results
-| |-- allure-reports
-
-# Languages and Framework
-
+## Languages and Framework
     1. Java-21
     2. Maven
     3. Selenium-java
@@ -30,7 +11,7 @@ HybridTestWithJavaAndSelenium
     9. logback-classic
     10. Cucumber
 
-# Steps to run the project:
+## Steps to run the project:
     1. clone the repository: git@github.com:Yeungemy/HybridTestWithJavaAndSelenium.git
     2. Install dependencies: 
         - mvn clean install -D skipTests
