@@ -4,7 +4,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-        features = {"src/test/resources/features/FindByStatus.feature"},
+        features = "src/test/resources/features/featuresOfApiTest/FindByStatus.feature",
         glue = "com.hybridTest.apiTest.stepDefinitions",
         plugin = {
                 "pretty",
