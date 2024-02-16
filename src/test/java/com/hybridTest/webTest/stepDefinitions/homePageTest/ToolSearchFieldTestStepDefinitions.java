@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class ToolSearchFieldTestStepDefinitions {
+public class ToolSearchFieldTestStepDefinitions{
 
     @Given("a partial tool name \\(at least three characters): {string}")
     public void givenPartialToolName(String toolName) {
