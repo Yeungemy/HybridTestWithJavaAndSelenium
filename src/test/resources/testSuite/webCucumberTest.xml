@@ -5,7 +5,7 @@
     </listeners>
     <test name="apiTest">
         <classes>
-            <class name="Options.ApiTestRunner"/>
+            <class name="Options.WebTestRunner"/>
         </classes>
     </test>
 </suite>

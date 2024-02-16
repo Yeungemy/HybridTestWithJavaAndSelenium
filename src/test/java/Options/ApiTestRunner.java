@@ -1,4 +1,4 @@
-package com.hybridTest.apiTest.Options;
+package Options;
 
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -11,6 +11,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
                 "html:target/cucumber-reports"
         }
 )
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class ApiTestRunner extends AbstractTestNGCucumberTests {
 }
 
