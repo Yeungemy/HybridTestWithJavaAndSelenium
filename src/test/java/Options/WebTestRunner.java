@@ -4,9 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = {
-                "src/test/resources/features/featuresOfWebTest/ToolSearchFieldTest.feature"
-                },
+        features = "src/test/resources/features/featuresOfWebTest",
         glue = {
                 "com.hybridTest.webTest.stepDefinitions.hooks",
                 "com.hybridTest.webTest.stepDefinitions"

@@ -10,10 +10,20 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class SetupHooks {
     protected static WebDriver driver;
     protected static BasePageTest basePage;
     private static String currentFeature;
+
+    @After
+    public void tearDown(Scenario scenario) {
+        if (scenario.getStatus() == Status.FAILED) {
+            // Take a screenshot or perform other actions for failure handling
+            captureScreenshot(scenario);
+        }
+    }
 
     @Before
     public void setUp(Scenario scenario) {
@@ -24,17 +34,12 @@ public class SetupHooks {
         }
     }
 
-    @After
-    public void tearDown(Scenario scenario) {
-        if (scenario.getStatus() == Status.FAILED) {
-            // Take a screenshot or perform other actions for failure handling
-            captureScreenshot(scenario);
-        }
-        String featureName = scenario.getUri().toString();
-        if (!featureName.equals(currentFeature)) {
-            currentFeature = null;
-            tearDownFeature();
-        }
+    @After(order = 1) // This will run after the scenario but before the tear-down feature
+    public void tearDownScenario(Scenario scenario) {
+        System.out.println("Finished feature: " + currentFeature);
+
+        // Clean up WebDriver after each scenario
+        DriverFactoryTest.quitDriver();
     }
 
     private void setUpFeature() {
@@ -49,22 +54,9 @@ public class SetupHooks {
 
         // launch on the test platform
         basePage.launchWebTestPlatform();
-    }
 
-    private void tearDownFeature() {
-        // Clean up WebDriver after the feature
-        quitDriver();
-
-        // Perform any feature-level tear down tasks here
-        System.out.println("Finished feature: " + currentFeature);
-    }
-
-    public static void quitDriver() {
-        // Quit WebDriver
-        if (driver != null) {
-            driver.quit();
-        }
-        driver = null;
+        // Set implicit wait timeout
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     private void captureScreenshot(Scenario scenario) {
