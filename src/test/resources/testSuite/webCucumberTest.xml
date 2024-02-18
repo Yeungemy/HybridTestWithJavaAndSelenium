@@ -1,9 +1,8 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ApiTestSuite">
+<suite name="WebCucumberTestSuite">
     <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="listeners.WebCucumberTestListener"/>
     </listeners>
-    <test name="apiTest">
+    <test name="WebCucumberTest">
         <classes>
             <class name="Options.WebTestRunner"/>
         </classes>

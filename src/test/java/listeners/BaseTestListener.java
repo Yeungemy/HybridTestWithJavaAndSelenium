@@ -11,20 +11,18 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.ByteArrayInputStream;
+import java.io.File; // Add this import
+import java.io.IOException;
 
 public class BaseTestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
         System.out.println("==============================================================================================");
-//        String suiteName = context.getSuite().getName();
-//        System.out.println("Test suite: " + convertToTitleCase(suiteName) + " is starting...");
     }
 
     @Override
     public void onTestStart(ITestResult result) {
-//        String methodName = result.getMethod().getMethodName();
-//        System.out.println("Test: " + convertToTitleCase(methodName) + " is starting...");
     }
 
     @Override
@@ -46,7 +44,7 @@ public class BaseTestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        // Cleanup or finalization, if needed, can be done here
+        generateAllureReport();
         System.out.println("==============================================================================================");
     }
 
@@ -81,4 +79,24 @@ public class BaseTestListener implements ITestListener {
 
         return titleCase.toString();
     }
+
+    private void generateAllureReport() {
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("allure", "serve", "target/allure-results");
+            processBuilder.directory(new File(System.getProperty("user.dir")));
+
+            Process process = processBuilder.start();
+            int exitCode = process.waitFor();
+
+            if (exitCode != 0) {
+                System.err.println("Error: Allure report generation failed with exit code " + exitCode);
+            } else {
+                System.out.println("Allure report generated successfully");
+            }
+        } catch (IOException | InterruptedException e) {
+            System.err.println("Error: Failed to generate Allure report");
+            e.printStackTrace();
+        }
+    }
+
 }
