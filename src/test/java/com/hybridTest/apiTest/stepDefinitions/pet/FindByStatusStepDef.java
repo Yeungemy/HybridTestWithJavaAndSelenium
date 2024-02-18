@@ -1,4 +1,4 @@
-package com.hybridTest.apiTest.stepDefinitions;
+package com.hybridTest.apiTest.stepDefinitions.pet;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

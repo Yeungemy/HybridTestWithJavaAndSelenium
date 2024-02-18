@@ -11,8 +11,7 @@ import io.cucumber.testng.CucumberOptions;
                 },
         plugin = {
                 "pretty",
-                "html:target/cucumber-reports",
-                "listeners.WebCucumberTestListener"
+                "html:target/cucumber-reports"
                 }
 )
 public class WebTestRunner extends AbstractTestNGCucumberTests {

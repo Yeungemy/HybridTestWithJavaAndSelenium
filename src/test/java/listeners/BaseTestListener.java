@@ -11,7 +11,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.ByteArrayInputStream;
-import java.io.File; // Add this import
+import java.io.File;
 import java.io.IOException;
 
 public class BaseTestListener implements ITestListener {
@@ -82,7 +82,7 @@ public class BaseTestListener implements ITestListener {
 
     private void generateAllureReport() {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("allure", "serve", "target/allure-results");
+            ProcessBuilder processBuilder = new ProcessBuilder("allure.bat", "serve", "target/allure-results");
             processBuilder.directory(new File(System.getProperty("user.dir")));
 
             Process process = processBuilder.start();
@@ -98,5 +98,4 @@ public class BaseTestListener implements ITestListener {
             e.printStackTrace();
         }
     }
-
 }

@@ -26,3 +26,6 @@
         b. run api test: mvn clean test -D suiteXmlFile=src/test/resources/testSuite/apiTest.xml
         c. run all tests: ./scripts/runTest.sh
         d. open the allure report: allure serve target/allure-results
+
+## TODO
+    1. allure report should include api and web cucumber test results
