@@ -10,12 +10,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import java.time.Duration;
-
 public class SetupHooks {
     protected static WebDriver driver;
     protected static BasePageTest basePage;
     private static String currentFeature;
+    private static boolean isInitialized = false;
 
     @After
     public void tearDown(Scenario scenario) {
@@ -28,35 +27,34 @@ public class SetupHooks {
     @Before
     public void setUp(Scenario scenario) {
         String featureName = scenario.getUri().toString();
+        System.out.println("Starting feature: " + currentFeature);
+
+        // initialize driver
+        setUpDriver();
+
+        // launch the test platform
         if (!featureName.equals(currentFeature)) {
             currentFeature = featureName;
-            setUpFeature();
+            basePage.launchWebTestPlatform();
         }
     }
 
     @After(order = 1) // This will run after the scenario but before the tear-down feature
     public void tearDownScenario(Scenario scenario) {
-        System.out.println("Finished feature: " + currentFeature);
+        System.out.println("Finished feature: " + scenario);
 
         // Clean up WebDriver after each scenario
         DriverFactoryTest.quitDriver();
     }
 
-    private void setUpFeature() {
-        // Set up WebDriver using the default browser (Chrome)
-        driver = DriverFactoryTest.initializeDriver();
+    private void setUpDriver() {
+        if (!isInitialized) {
+            driver = DriverFactoryTest.initializeDriver();
 
-        // Initialize BasePage for the feature
-        basePage = new BasePageTest(driver);
-
-        // Perform any feature-level setup tasks here
-        System.out.println("Starting feature: " + currentFeature);
-
-        // launch on the test platform
-        basePage.launchWebTestPlatform();
-
-        // Set implicit wait timeout
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            // Initialize BasePage for the feature
+            basePage = new BasePageTest(driver);
+            isInitialized = true;
+        }
     }
 
     private void captureScreenshot(Scenario scenario) {
