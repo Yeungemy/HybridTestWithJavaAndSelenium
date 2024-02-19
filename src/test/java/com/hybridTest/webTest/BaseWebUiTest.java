@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
 @Listeners(WebUiTestListener.class)
-
 public class BaseWebUiTest {
     protected static WebDriver driver;
     protected static BasePageTest basePage;
@@ -31,6 +30,9 @@ public class BaseWebUiTest {
 
     @AfterSuite
     public void tearDown() {
-        DriverFactoryTest.quitDriver();
+        // Quit the driver only if it's not null
+        if (driver != null) {
+            DriverFactoryTest.quitDriver();
+        }
     }
 }

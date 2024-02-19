@@ -8,7 +8,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
         glue = "com.hybridTest.apiTest.stepDefinitions",
         plugin = {
                 "pretty",
-                "html:target/cucumber-reports"
+                "html:target/cucumber-reports",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         }
 )
 public class ApiTestRunner extends AbstractTestNGCucumberTests {

@@ -3,7 +3,7 @@
     1. Java-21
     2. Maven
     3. Selenium-java
-    4. allure
+    4. allure: setting up for cucumber-testng - https://allurereport.org/docs/cucumberjvm/
     5. jquery
     6. testng
     7. webdriver manager
@@ -28,4 +28,4 @@
         d. open the allure report: allure serve target/allure-results
 
 ## TODO
-    1. allure report should include api and web cucumber test results
+    
