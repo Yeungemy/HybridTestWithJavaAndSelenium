@@ -44,7 +44,7 @@ public class BaseTestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        generateAllureReport();
+//        generateAllureReport();
         System.out.println("==============================================================================================");
     }
 
@@ -80,6 +80,9 @@ public class BaseTestListener implements ITestListener {
         return titleCase.toString();
     }
 
+    /**
+     * This method will automatically generate an allure report and open it accordingly
+     */
     private void generateAllureReport() {
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("allure.bat", "serve", "target/allure-results");

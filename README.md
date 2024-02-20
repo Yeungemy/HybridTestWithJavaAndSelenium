@@ -28,4 +28,3 @@
         d. open the allure report: allure serve target/allure-results
 
 ## TODO
-    

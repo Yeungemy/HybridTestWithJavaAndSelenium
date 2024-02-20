@@ -2,7 +2,7 @@
 
 run_web_tests() {
     echo "Running Web Tests..."
-    mvn clean test -D suiteXmlFile=src/test/resources/testSuite/webTest.xml -D headless=true
+    mvn clean test -D suiteXmlFile=src/test/resources/testSuite/webTest.xml
 }
 
 run_web_cucumber_tests() {
@@ -17,7 +17,7 @@ run_api_tests() {
 
 generate_allure_report() {
     echo "Generating Allure Report..."
-    allure generate --clean -o ../target/allure-report
+    allure generate --clean -o ./target/allure-report
 }
 
 # Run both API and web tests
